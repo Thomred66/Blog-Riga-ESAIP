@@ -1,1 +1,188 @@
+/* Réinitialisation simple et Box Sizing */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 
+/* Styles Généraux du Body */
+body {
+    font-family: 'Arial', sans-serif; /* Police simple et lisible */
+    line-height: 1.6;
+    color: #333; /* Couleur de texte principale (gris foncé) */
+    background-color: #f4f4f4; /* Fond gris clair */
+}
+
+/* Conteneur Principal pour centrer le contenu */
+.container {
+    width: 90%; /* Largeur du contenu */
+    max-width: 960px; /* Largeur maximale */
+    margin: 0 auto; /* Centrage horizontal */
+    padding: 0 20px; /* Espace intérieur gauche/droite */
+}
+
+/* --- Header (Bannière) --- */
+.banner {
+    background-color: #0056b3; /* Couleur de fond bleue (adaptez !) */
+    color: #fff; /* Texte blanc */
+    padding: 30px 0;
+    text-align: center;
+}
+
+.banner h1 {
+    font-size: 2.5em; /* Taille du titre principal */
+    margin-bottom: 10px;
+}
+
+/* --- Navigation Principale --- */
+.main-nav {
+    background-color: #333; /* Fond gris foncé */
+    padding: 10px 0;
+}
+
+.main-nav ul {
+    list-style: none; /* Enlève les puces */
+    text-align: center;
+}
+
+.main-nav ul li {
+    display: inline-block; /* Met les éléments sur la même ligne */
+    margin: 0 15px;
+}
+
+.main-nav ul li a {
+    color: #fff; /* Texte blanc */
+    text-decoration: none; /* Enlève le soulignement */
+    font-weight: bold;
+    padding: 5px 10px;
+    transition: background-color 0.3s ease; /* Effet de transition doux */
+}
+
+.main-nav ul li a:hover {
+    background-color: #555; /* Fond au survol */
+    border-radius: 4px; /* Coins arrondis au survol */
+}
+
+/* --- Contenu Principal (Main) --- */
+.content {
+    background-color: #fff; /* Fond blanc pour le contenu */
+    padding-top: 30px;
+    padding-bottom: 30px;
+    margin-top: 20px; /* Espace au-dessus du contenu */
+    margin-bottom: 20px; /* Espace en dessous */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Ombre légère */
+}
+
+/* --- Sections --- */
+section {
+    margin-bottom: 40px; /* Espace entre les sections */
+}
+
+section h2 {
+    color: #0056b3; /* Couleur bleue pour les titres de section */
+    font-size: 1.8em;
+    margin-bottom: 20px;
+    border-bottom: 2px solid #eee; /* Ligne de séparation sous le titre */
+    padding-bottom: 10px;
+}
+
+/* Lignes de séparation horizontales */
+hr {
+    border: 0;
+    height: 1px;
+    background-color: #eee;
+    margin: 30px 0;
+}
+
+/* --- Aperçus d'Articles --- */
+.post-preview {
+    margin-bottom: 30px; /* Espace entre les aperçus */
+    padding-bottom: 20px;
+    border-bottom: 1px dotted #ccc; /* Séparation légère entre articles */
+}
+
+.post-preview:last-child {
+    border-bottom: none; /* Pas de bordure pour le dernier */
+    padding-bottom: 0;
+}
+
+
+.post-preview h3 {
+    font-size: 1.5em;
+    margin-bottom: 5px;
+}
+
+.post-preview h3 a {
+    text-decoration: none;
+    color: #333; /* Couleur du titre */
+    transition: color 0.3s ease;
+}
+
+.post-preview h3 a:hover {
+    color: #0056b3; /* Couleur au survol */
+}
+
+.post-preview .meta {
+    font-size: 0.9em;
+    color: #777; /* Couleur plus claire pour les métadonnées */
+    margin-bottom: 10px;
+}
+
+/* --- Section Médias --- */
+.media-links {
+    display: grid; /* Utilise Grid pour un layout simple */
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Colonnes responsives */
+    gap: 20px; /* Espace entre les éléments */
+}
+
+.media-item {
+    background-color: #f9f9f9; /* Fond légèrement différent */
+    padding: 15px;
+    border: 1px solid #eee;
+    border-radius: 4px;
+}
+
+.media-item h3 {
+    font-size: 1.2em;
+    margin-bottom: 8px;
+}
+
+.media-item h3 a {
+     text-decoration: none;
+     color: #0056b3;
+}
+
+.media-item h3 a:hover {
+     text-decoration: underline;
+}
+
+
+/* --- Footer (Pied de page) --- */
+.site-footer {
+    background-color: #333; /* Fond gris foncé */
+    color: #ccc; /* Texte gris clair */
+    text-align: center;
+    padding: 20px 0;
+    font-size: 0.9em;
+}
+
+.site-footer p {
+    margin-bottom: 5px;
+}
+
+/* --- Responsive (Simple exemple pour petits écrans) --- */
+@media (max-width: 768px) {
+    .banner h1 {
+        font-size: 2em;
+    }
+    .main-nav ul li {
+        display: block; /* Met les liens de nav les uns sous les autres */
+        margin: 10px 0;
+    }
+    section h2 {
+        font-size: 1.5em;
+    }
+    .post-preview h3 {
+        font-size: 1.3em;
+    }
+}
